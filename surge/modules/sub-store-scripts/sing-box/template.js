@@ -20,7 +20,8 @@ log(`传入参数 type: ${type}, name: ${name}, outbound: ${outbound}`)
 type = /^1$|col|组合/i.test(type) ? 'collection' : 'subscription'
 
 log(`① 解析配置文件`)
-// let config
+let config
+config = JSON.parse($content ?? $files[0])
 // try {
 //   config = JSON.parse($content ?? $files[0])
 // } catch (e) {
